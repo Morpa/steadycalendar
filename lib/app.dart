@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:steadycalendar/screens/intro/intro.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -9,10 +10,11 @@ class App extends StatelessWidget {
       title: 'Steady Calendar',
       initialRoute: Intro.routeName,
       routes: {
-        Splash.routeName: (context) => const Spash(),
+        Intro.routeName: (context) => const Intro(),
+        /* Splash.routeName: (context) => const Spash(),
         Intro.routeName: (context) => const Intro(),
         LoginOptions.routeName: (context) => const LoginOptions(),
-        CalPager.routeName: (context) => const CalPager(),
+        CalPager.routeName: (context) => const CalPager(), */
       },
     );
   }
