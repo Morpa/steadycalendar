@@ -16,7 +16,7 @@ class SCImageButton extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(0, 10.0, 20.0, 10.0),
           child: Image.asset(assetName, height: 40.0),
         ),
-        Text(text),
+        Text(text)
       ],
     );
   }

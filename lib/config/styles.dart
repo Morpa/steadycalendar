@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// NOTE we won't be using ThemeData here, as it is tightly coupled with Material Design,
+// something that we want to avoid as we have a custom UI that doesn't alienate iOS users.
+
 class Styles {
   static final Color primaryTextColor = hexToColor('000000');
   static final Color secondaryTextColor = hexToColor('666666');
@@ -13,9 +16,9 @@ class Styles {
 
   static const String secondaryFontRegular = 'Quicksand';
 
-  static const FontWeight primaryFontWeightSemiBold = FontWeight.w700;
-  static const FontWeight primaryFontWeightLight = FontWeight.w300;
-  static const FontWeight primaryFontWeightExtraLight = FontWeight.w100;
+  static final FontWeight primaryFontWeightSemiBold = FontWeight.w700;
+  static final FontWeight primaryFontWeightLight = FontWeight.w300;
+  static final FontWeight primaryFontWeightExtraLight = FontWeight.w100;
 
   static const double primaryHeaderFontSize = 32.0;
   static const double secondaryHeaderFontSize = 22.0;
@@ -47,22 +50,21 @@ class Styles {
 
   static InputDecoration textFormFieldDecoration(String hintText) {
     return InputDecoration(
-      filled: true,
-      fillColor: Colors.white,
-      contentPadding: const EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 25.0),
-      border: InputBorder.none,
-      labelStyle: const TextStyle(
-        height: 0.0,
-      ),
-      helperStyle: const TextStyle(
-        height: 0.0,
-      ),
-      hintText: hintText,
-      hintStyle: TextStyle(
-          color: Styles.tertiaryTextColor,
-          fontWeight: Styles.primaryFontWeightLight,
-          fontSize: Styles.primaryTextFormFieldFontSize),
-    );
+        filled: true,
+        fillColor: Colors.white,
+        contentPadding: const EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 25.0),
+        border: InputBorder.none,
+        labelStyle: const TextStyle(
+          height: 0.0,
+        ),
+        helperStyle: const TextStyle(
+          height: 0.0,
+        ),
+        hintText: hintText,
+        hintStyle: TextStyle(
+            color: Styles.tertiaryTextColor,
+            fontWeight: Styles.primaryFontWeightLight,
+            fontSize: Styles.primaryTextFormFieldFontSize));
   }
 
   static Color hexToColor(String code) {

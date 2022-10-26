@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:steadycalendar/components/sc_flat_button.dart';
 import 'package:steadycalendar/components/sc_image_button.dart';
 import 'package:steadycalendar/config/styles.dart';
+import 'package:steadycalendar/screens/cal_pager/cal_pager.dart';
 
 class LoginOptions extends StatelessWidget {
   static const String routeName = '/intro/login_options';
@@ -31,7 +32,6 @@ class LoginOptions extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: SCFlatButton(
-                key,
                 const SCImageButton('assets/images/google-logo-9808.png',
                     'Continue with Google'),
                 textColor: Styles.primaryTextColor,
@@ -39,7 +39,7 @@ class LoginOptions extends StatelessWidget {
                 onTap: () => _signupTapped(context),
               ),
             ),
-          ),
+          )
         ],
       ),
     );
@@ -47,6 +47,6 @@ class LoginOptions extends StatelessWidget {
 
   Future _signupTapped(BuildContext context) async {
     // NOTE we're simulating login here for now
-    //Navigator.of(context).pushNamed(CalPager.routeName);
+    Navigator.of(context).pushNamed(CalPager.routeName);
   }
 }
